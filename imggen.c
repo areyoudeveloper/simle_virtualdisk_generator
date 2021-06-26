@@ -19,7 +19,7 @@ int main(){
     char none[255] = " ";
     printf("Format now?(y/n) ");
     scanf("%s", &format[0]);
-    printf("filesytem type(ext3/ext4/ntfs) ");
+    printf("filesytem type(ext3/ext4) ");
     scanf("%s", &fstype);
     kbsize = size * 100005;
     for(x=1;x != 0; x++) {
