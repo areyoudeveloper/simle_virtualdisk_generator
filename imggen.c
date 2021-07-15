@@ -12,7 +12,7 @@ int main(){
     printf("Filename? ");
     scanf("%s", &filename);
     FILE * diskfile; 
-    diskfile = fopen (filename, "w++");
+    diskfile = fopen (filename, "w");
     printf("Input Disk Size in megabyte: ");
     scanf("%d", &size);
     char format[1];
@@ -21,10 +21,10 @@ int main(){
     scanf("%s", &format[0]);
     printf("filesytem type(ext3/ext4/ntfs) ");
     scanf("%s", &fstype);
-    kbsize = size * 100005;
+    kbsize = size * 13000;
     for(x=1;x != 0; x++) {
         if (x!=0) {
-            fprintf(diskfile, "%d""\n", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+            fprintf(diskfile, "0000000000000000000000000000000000000000000000000000000000000000000000000000000000\n");
         }
         if (x == kbsize) {
             fclose(diskfile);
