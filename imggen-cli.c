@@ -19,6 +19,8 @@ int main(){
     char none[255] = " ";
     printf("Format now?(y/n) ");
     scanf("%s", &format[0]);
+    printf("filesytem type(ext3/ext4/ntfs) ");
+    scanf("%s", &fstype);
     kbsize = size * 13000;
     for(x=1;x != 0; x++) {
         if (x!=0) {
@@ -27,8 +29,6 @@ int main(){
         if (x == kbsize) {
             fclose(diskfile);
             if (format[0] == 'y') {
-                printf("filesytem type(ext3/ext4) ");
-                scanf("%s", &fstype);
                 strcpy (cmd, "mkfs.");
                 strcat (cmd, fstype);
                 strcat (cmd, none);
